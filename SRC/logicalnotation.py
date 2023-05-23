@@ -17,15 +17,21 @@ class logicalnotation:
             print(f"Exception occured on object: {index+1}")
         
         print(*node_list)
+        logicalnotation.execute_node_list(node_list)
     def build_from_node(node_name, nvals): #Evaluates single node from json file and builds new node class
-        node_ref = node.node(node_name, nvals[0],nvals[1],nvals[2])
+        node_ref = node.node()
         new_node = type(node_ref)
+        setattr(new_node, "name",node_name)
+        setattr(new_node, "args",nvals[0])
+        setattr(new_node, "body",nvals[1])
+        setattr(new_node, "passvar",nvals[2])
         
-        print(node_name)
-        for v in nvals:
-            print(v)
         node_list.append(new_node)
-        
+    
+    def execute_node_list(nlist):
+        for c in nlist:
+            c.print_node(c)
+                        
 
 def get_program(file_path):
         try:

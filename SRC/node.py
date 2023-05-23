@@ -1,11 +1,12 @@
-
-class node:
+class node:  
+    name = ""
+    args = ""
+    body = []
+    passvar = ""
+    def print_node(self):
+        print (self.name)
+        print (self.args)
+        print (self.body)
+        print (self.passvar)
     
-    def __init__(self, name, args, body, passvar):
-        self.name = name
-        self.args = args
-        self.body = body
-        self.passvar = passvar
-    def return_node():
-        return node
 
