@@ -1,2 +1,2 @@
 # JLog
-A logical notation interpreter for JSON 
+A Python logical notation interpreter for JSON 
