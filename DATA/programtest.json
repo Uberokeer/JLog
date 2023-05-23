@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Main_node",
+        "args": "null",
+        "body": [ "int x = 5", "int y = 5", "int z = (x + y)"],
+        "pass": "z to Second_node"
+    },
+    {
+        "name": "Second_node",
+        "args": "int z",
+        "body": ["print(z)","z += 10"],
+        "pass": "z to Third_node"
+    },
+    {
+        "name": "Third_node",
+        "args": "int x",
+        "body": ["print(z)","z += 10"],
+        "pass": "z to Console"
+    }
+]
