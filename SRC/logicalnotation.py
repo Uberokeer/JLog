@@ -1,6 +1,5 @@
 import json
 import os
-import node
 import nodehandler
 class logicalnotation:
     def get_program(file_path):
@@ -30,7 +29,7 @@ class logicalnotation:
                 print(f"(mod)Logicalnotation.py - (def)interpret_json_objects - Error: (The program found at: ({load_url}) does not contain the proper headers: 'name', 'args', 'body', or 'pass')")
                 print(f"Exception occured on object: {index+1}")
     def object_to_node(object_data):
-        n = node.node(object_data)
+        n = nodehandler.node(object_data)
         logicalnotation.add_to_environment(n)
     def add_to_environment(node_to_add):
         ne.add_node(node_to_add)
@@ -50,4 +49,4 @@ if (os.path.exists(load_url)):
     print("Executing objects")
     ne.execute_environment()
 else:
-    print("Please enter a valid path")
+    print("The path entered was not valid")

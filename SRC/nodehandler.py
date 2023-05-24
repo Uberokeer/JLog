@@ -1,5 +1,8 @@
-import node
 node_list = []
+class node:
+    def __init__(self, nvals):
+        self.nvals = nvals
+        print("Node Created:", nvals)
 class node_handler:
     
     def add_node(node_to_add):
